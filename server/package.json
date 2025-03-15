@@ -1,0 +1,31 @@
+{
+  "name": "thrive-x-production-wizard",
+  "version": "1.0.0",
+  "description": "Sistema di gestione integrata dei processi produttivi per Thrive X SRL",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install-all": "npm install && npm run install-server && npm run install-client",
+    "build": "npm run build --prefix client",
+    "seed": "node server/config/seedData.js"
+  },
+  "keywords": [
+    "industria4.0",
+    "transizione4.0",
+    "produzione",
+    "gestione",
+    "mern"
+  ],
+  "author": "Thrive X SRL",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  }
+}
